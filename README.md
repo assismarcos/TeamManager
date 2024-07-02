@@ -2,7 +2,7 @@
 - As an HR user, I want a small application to control the Team Members, to know where they are located, and to know their local currency so that I can make the correct payment using their currency
 
 ### Feature and requirements
-## Member
+### Member
 A Member has
 - Name
 - SalaryPerYear
