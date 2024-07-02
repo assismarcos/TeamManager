@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "8d47a6e0-373c-4445-a92e-607138fb1510",
+		"name": "Team API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "86549"
+	},
+	"item": [
+		{
+			"name": "Member",
+			"item": [
+				{
+					"name": "Get Members",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7090/api/members?tags=developer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7090",
+							"path": [
+								"api",
+								"members"
+							],
+							"query": [
+								{
+									"key": "tags",
+									"value": "developer"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Member",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7090/api/members/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7090",
+							"path": [
+								"api",
+								"members",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Team Member",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jhon Dutton\",\r\n    \"salaryPerYear\": 350000,\r\n    \"type\": 1,\r\n    \"contractDuration\": 3,\r\n    \"role\": \"CTO\",\r\n    \"tags\": \"CTO\",\r\n    \"countryName\": \"usa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7090/api/members",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7090",
+							"path": [
+								"api",
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Team Member",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"name\": \"John Dutton\",\r\n    \"salaryPerYear\": 350000.00,\r\n    \"type\": 1,\r\n    \"contractDuration\": 3,\r\n    \"role\": null,\r\n    \"tags\": \"CTO\",\r\n    \"countryName\": \"United States\",\r\n    \"currencyCode\": \"\",\r\n    \"currencySymbol\": \"$\",\r\n    \"currencyName\": \"United States dollar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7090/api/members",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7090",
+							"path": [
+								"api",
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Member",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7090/api/members/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7090",
+							"path": [
+								"api",
+								"members",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUiLCJuYmYiOjE3MTk4ODQ3MzMsImV4cCI6MTcyMDQ4OTUzMywiaWF0IjoxNzE5ODg0NzMzfQ.uXzhfd481WATFJXFPORq3BCxKD_1T-8oQBb1f_nWfpI",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7090/api/users?userName=mike@bellastlane.com",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7090",
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "mike@bellastlane.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddOrUpdate User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"mike@bellastlane.com\",\r\n    \"password\": \"abc123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7090/api/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7090",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"mike@bellastlane.com\",\r\n    \"password\": \"abc123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7090/api/authentication",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7090",
+							"path": [
+								"api",
+								"authentication"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

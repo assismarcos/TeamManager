@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  teammanagement.api:
+    image: ${DOCKER_REGISTRY-}teammanagementapi
+    build:
+      context: .
+      dockerfile: src/TeamManagement.Api/Dockerfile
