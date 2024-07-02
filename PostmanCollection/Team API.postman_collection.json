@@ -178,7 +178,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:7090/api/users?userName=mike@bellastlane.com",
+							"raw": "https://localhost:7090/api/users?userName=sample@mail.com",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -191,7 +191,7 @@
 							"query": [
 								{
 									"key": "userName",
-									"value": "mike@bellastlane.com"
+									"value": "sample@mail.com"
 								}
 							]
 						}
