@@ -1,7 +1,7 @@
-### User history
+## User history
 - As an HR user, I want a small application to control the Team Members, to know where they are located, and to know their local currency so that I can make the correct payment using their currency
 
-### Feature and requirements
+## Feature and requirements
 ### Member
 A Member has
 - Name
@@ -15,15 +15,15 @@ A Member has
 ## User
 A User has
 - UserName
-- - It can be an email
+- It can be an email
 - Password
-- - Any plain text, but it must be stored as a hash for security reasons
+- Any plain text, but it must be stored as a hash for security reasons
 
-### Missing implementation/features
+## Missing implementation/features
 - The user password must be hashed
 - Unit tests and more integration tests
 - Docker files were added but not tested. The application must be executed via IDE or donet run command
 
-### Issues or limitations
+## Issues or limitations
 - The integration tests depend on a real MS SQL database to run (LocalDB, docker, or a regular installed instance)
 - The integration tests are not passing due to authentication issues. The authentication is being mocked, but I couldn't find out why it doesn't work.
